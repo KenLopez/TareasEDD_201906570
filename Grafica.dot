@@ -1,0 +1,22 @@
+digraph G{
+nodo0[shape=Mrecord, color="#00bf0d" label="{{Marvin Martinez|Marvin25ronal}|Jugar apex}" color="#80036b"];
+nodo1[shape=Mrecord, color="#00bf0d" label="{{Yaiza Pineda|Bambi}|Patinar}" color="#80036b"];
+nodo2[shape=Mrecord, color="#00bf0d" label="{{Jonathan Lopez|Pancho}|Comer}" color="#80036b"];
+nodo3[shape=Mrecord, color="#00bf0d" label="{{usuario1 bla|bla}|Jugar apex}" color="#80036b"];
+nodo4[shape=Mrecord, color="#00bf0d" label="{{usuario2 bla|bla}|Jugar apex}" color="#80036b"];
+nodo5[shape=Mrecord, color="#00bf0d" label="{{usuario3 sale edd|vamos con todo}|100 en la fase 1}" color="#80036b"];
+head [shape = oval label = "Cabeza" color  = "#000dff"]
+cola [shape = oval, label = "Cola" color  = "#000dff"]
+nodo0->nodo1[arrowhead=rvee, color=yellow]
+nodo1->nodo0[arrowhead=rvee, color=orange]
+nodo1->nodo2[arrowhead=rvee, color=yellow]
+nodo2->nodo1[arrowhead=rvee, color=orange]
+nodo2->nodo3[arrowhead=rvee, color=yellow]
+nodo3->nodo2[arrowhead=rvee, color=orange]
+nodo3->nodo4[arrowhead=rvee, color=yellow]
+nodo4->nodo3[arrowhead=rvee, color=orange]
+nodo4->nodo5[arrowhead=rvee, color=yellow]
+nodo5->nodo4[arrowhead=rvee, color=orange]
+head->nodo0 [arrowhead=vee, color=red]
+nodo5-> cola [dir=back arrowtail=vee color=red]
+}

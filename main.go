@@ -2,10 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
-	"os"
-	"os/exec"
-	"strconv"
 )
 
 type nodo struct {
@@ -29,8 +25,17 @@ func (this *lista) Insertar(nuevo *nodo) {
 	}
 }
 
+func GetAscii(texto string) int {
+	var ascii int
+	runes := []rune(texto)
+	for i := 0; i < len(runes); i++ {
+		ascii += int(runes[i])
+	}
+	return ascii
+}
+
 func main() {
-	li := lista{nil, nil}
+	/*li := lista{nil, nil}
 	a := nodo{"Marvin", "Martinez", "Marvin25ronal", "Jugar apex", nil, nil}
 	b := nodo{"Yaiza", "Pineda", "Bambi", "Patinar", nil, nil}
 	c := nodo{"Jonathan", "Lopez", "Pancho", "Comer", nil, nil}
@@ -43,10 +48,17 @@ func main() {
 	li.Insertar(&d)
 	li.Insertar(&e)
 	li.Insertar(&f)
-	li.graficar()
+	li.graficar()*/
+	var name string = "Báez y Monroy"
+	fmt.Println(GetAscii(name))
+	var ascii int
+	for i := 0; i < len(name); i++ {
+		ascii += int(name[i])
+	}
+	fmt.Println(ascii)
 }
 
-func (this *lista) graficar() {
+/*func (this *lista) graficar() {
 	var codigo, conexiones string
 	var contador int = 0
 	codigo = "digraph G{\n"
@@ -78,4 +90,4 @@ func (this *lista) graficar() {
 		fmt.Println("No se pudo graficar, la lista está vacía")
 	}
 
-}
+}*/
