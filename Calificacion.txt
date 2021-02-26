@@ -1,0 +1,10 @@
+
+----------------Errores---------------------
+
+----------------Comentarios-----------------
+1. No es necesario utilizar un contador para graficar, en este caso funciona pero cuando sea un arbol o algo por el estilo
+el contador se va a perder por lo que recomiendo utilizar la direccion de memoria
+
+Presentacion    50/50
+Recorrido	50/50
+Total 		100 

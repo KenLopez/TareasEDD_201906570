@@ -2,6 +2,10 @@ package main
 
 import (
 	"fmt"
+	"io/ioutil"
+	"os"
+	"os/exec"
+	"strconv"
 )
 
 type nodo struct {
@@ -35,7 +39,7 @@ func GetAscii(texto string) int {
 }
 
 func main() {
-	/*li := lista{nil, nil}
+	li := lista{nil, nil}
 	a := nodo{"Marvin", "Martinez", "Marvin25ronal", "Jugar apex", nil, nil}
 	b := nodo{"Yaiza", "Pineda", "Bambi", "Patinar", nil, nil}
 	c := nodo{"Jonathan", "Lopez", "Pancho", "Comer", nil, nil}
@@ -48,17 +52,17 @@ func main() {
 	li.Insertar(&d)
 	li.Insertar(&e)
 	li.Insertar(&f)
-	li.graficar()*/
-	var name string = "Báez y Monroy"
+	li.graficar()
+	/*var name string = "Báez y Monroy"
 	fmt.Println(GetAscii(name))
 	var ascii int
 	for i := 0; i < len(name); i++ {
 		ascii += int(name[i])
 	}
-	fmt.Println(ascii)
+	fmt.Println(ascii)*/
 }
 
-/*func (this *lista) graficar() {
+func (this *lista) graficar() {
 	var codigo, conexiones string
 	var contador int = 0
 	codigo = "digraph G{\n"
@@ -90,4 +94,4 @@ func main() {
 		fmt.Println("No se pudo graficar, la lista está vacía")
 	}
 
-}*/
+}
