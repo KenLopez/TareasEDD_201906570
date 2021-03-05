@@ -1,0 +1,13 @@
+----------------Errores---------------------
+
+----------------Comentarios-----------------
+1. En tu metodo de recorrer tenes un stringbuilder y eso quiere decir 
+que por cada nodo el hace un stringbuilder, es memoria que se puede ahorrar
+si unicamente se les pasa uno por referencia
+
+
+Preorder    30/30
+Inorder     30/30
+PostOrder   30/30
+Arbol       10/10
+Total 		100    
