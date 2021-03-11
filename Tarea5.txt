@@ -1,0 +1,1 @@
+Solo llevo las estructuras vistas en clase y el nuevo campo del logo en el json
