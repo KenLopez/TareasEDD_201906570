@@ -1,0 +1,48 @@
+Métodos para encontrar el camino más corto:
+
+DIJKSTRA
+Muestra un método para encontrar el camino más corto en un grafo
+con pesos no negativos. Se inicia en el nodo origen, luego se recorren
+todas las aristas del nodo y, se elige aquella con el menor peso. 
+Se repite el proceso  tomando como nodo origen el nodo al que se trasladó.
+Hasta que se llegue al nodo destino. Aplicable únicamente en grafos sin
+pesos negativos.
+
+BELLMAN-FORD
+Es un algoritmo de caracter iterativo, que con cada repetición, intenta
+mejorar el camino más corto encontrado entre un nodo origen y todos los
+demás. Analiza la distancia entre el nodo origen y cualquier otro nodo
+del grafo. De existir, anota su peso, de no existir lo anota como 
+"infinito" (si se trata del nodo origen hacia él mismo, se coloca 0).
+En la siguiente iteración realiza las mismas comparaciones pero en relación
+a los datos anotados del intento anterior. El camino más corto será
+aquel que se arme al recorrer las referencias anotadas desde el 
+nodo destino al nodo origen. Este algoritmo acepta pesos negativos.
+
+FLOYD-WARSHALL
+Encuentra el camino más corto mediante la comparación de magnitudes
+presentes en una matriz llamada "matriz de distancias", de tamaño nxn
+(donde n es el número de nodos) donde se coloca cada peso de las 
+conexiones del nodo origen (fila) con el nodo destino (columna) de no
+existir dicha conexión, se colocará infinito y si se trata del mismo nodo
+se colocará 0. En cada iteración se toma la fila y columna que pertenezcan
+al mismo nodo. Se recorre la posición desde 0 a n en la matriz tanto para
+fila como para columna. Los datos de la fila y columna en dicha posición
+se sumarán, si estos son menores al peso descrito de la intersección en
+la matriz de ambas posiciones, se cambia el dato de dicha intersección
+por la suma y se anotará en otra matriz nxn llamada "matriz de recorridos"
+(dicha matriz contendrá en cada posición de la fila, el nodo perteneciente
+a su columna como valores iniciales)
+en la posición del dato cambiado, el nodo de la fila y columna que se 
+estaba analizando en ese momento. El camino más corto es el que resultará
+al recorrer las referencias de la matriz de recorridos desde la casilla 
+de intersección del nodo origen al nodo destino. Y su peso será el anotado
+en la matriz de distancias.
+
+
+Para el proyecto utilizaré el algoritmo de Dijkstra, pues considero
+su implementación es bastante simple y sus limitantes no son problema 
+en su aplicación en el proyecto. Además que su resultado se enfoca en 
+un solo nodo a la vez y no en todos, obteniendo un resultado más rápido
+para lo que se desea. 
+
